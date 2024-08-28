@@ -1,59 +1,57 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils'
+	import * as config from '$lib/config'
 
 	export let data
+  console.log(data);
+
 </script>
 
-<!-- SEO -->
 <svelte:head>
-	<title>{data.meta.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
+	<title>{config.title}</title>
 </svelte:head>
 
-<article>
-  <!-- Title -->
-	<hgroup>
-		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
-	</hgroup>
-
-  <!-- Tags -->
-	<div class="tags">
-		{#each data.meta.categories as category}
-			<span class="surface-4">&num;{category}</span>
+<!-- Posts -->
+<section>
+	<ul class="posts">
+		{#each data.posts as post}
+			<li class="post">
+				<a href={`log/${post.slug}`} class="title">{post.title}</a>
+				<p class="date">{formatDate(post.date)}</p>
+				<p class="description">{post.description}</p>
+			</li>
+      <div class="prose">
+        <svelte:component this={post.content} />
+      </div>
 		{/each}
-	</div>
-
-  <!-- Post -->
-	<div class="prose">
-		<svelte:component this={data.content} />
-	</div>
-</article>
+	</ul>
+</section>
 
 <style>
-	article {
-		max-inline-size: var(--size-content-3);
-		margin-inline: auto;
+	.posts {
+		display: grid;
+		gap: 2rem;
 	}
 
-	h1 {
+	.post {
+		max-inline-size: var(--size-content-3);
+	}
+
+	.post:not(:last-child) {
+		border-bottom: 1px solid var(--border);
+		padding-bottom: var(--size-7);
+	}
+
+	.title {
+		font-size: var(--font-size-fluid-3);
 		text-transform: capitalize;
 	}
 
-	h1 + p {
-		margin-top: var(--size-2);
+	.date {
 		color: var(--text-2);
 	}
 
-	.tags {
-		display: flex;
-		gap: var(--size-3);
-		margin-top: var(--size-7);
-	}
-
-	.tags > * {
-		padding: var(--size-2) var(--size-3);
-		border-radius: var(--radius-round);
+	.description {
+		margin-top: var(--size-3);
 	}
 </style>

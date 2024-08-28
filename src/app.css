@@ -2,30 +2,32 @@
 
 html {
 	/* font */
-	--font-sans: 'Arial', sans-serif;
+	--font-sans: 'Space Mono', monospace;
 	--font-mono: 'Space Mono', monospace;
 
 	/* dark */
 	--brand-dark: var(--orange-3);
 	--text-1-dark: var(--gray-3);
 	--text-2-dark: var(--gray-5);
-	--surface-1-dark: var(--gray-12);
+	--surface-1-dark: black;
 	--surface-2-dark: var(--gray-11);
 	--surface-3-dark: var(--gray-10);
 	--surface-4-dark: var(--gray-9);
-	--background-dark: var(--gradient-8);
+	--background-dark: black;
 	--border-dark: var(--gray-9);
+  --blood-dark: transparent;
 
 	/* light */
 	--brand-light: var(--orange-10);
-	--text-1-light: var(--gray-8);
-	--text-2-light: var(--gray-7);
-	--surface-1-light: var(--gray-0);
+	--text-1-light: white;
+	--text-2-light: #aaa;
+	--surface-1-light: black;
 	--surface-2-light: var(--gray-1);
 	--surface-3-light: var(--gray-2);
 	--surface-4-light: var(--gray-3);
-	--background-light: none;
+	--background-light: black;
 	--border-light: var(--gray-4);
+  --blood-light: #CC3232;
 }
 
 :root {
@@ -34,6 +36,7 @@ html {
 	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
 	--text-2: var(--text-2-dark);
+  --link-visited: var(--accent-color);
 	--surface-1: var(--surface-1-dark);
 	--surface-2: var(--surface-2-dark);
 	--surface-3: var(--surface-3-dark);
@@ -70,6 +73,7 @@ html {
 	--surface-4: var(--surface-4-dark);
 	--background: var(--background-dark);
 	--border: var(--border-dark);
+  --blood: var(--blood-dark);
 }
 
 [color-scheme='light'] {
@@ -84,6 +88,7 @@ html {
 	--surface-4: var(--surface-4-light);
 	--background: var(--background-light);
 	--border: var(--border-light);
+  --blood: var(--blood-light);
 }
 
 html,
@@ -96,6 +101,13 @@ html {
 	accent-color: var(--link);
 	background-image: var(--background);
 	background-attachment: fixed;
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
 }
 
 img {
@@ -142,7 +154,7 @@ li {
 }
 
 .prose :is(ul, ol) {
-	list-style-type: '🔥';
+	list-style-type: disc;
 	padding-left: var(--size-5);
 }
 
@@ -156,4 +168,16 @@ li {
 	padding: 1rem;
 	border-radius: 8px;
 	tab-size: 2;
+}
+
+.blood {
+  background-color: var(--blood);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }

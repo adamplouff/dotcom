@@ -14,6 +14,7 @@
 	<Header />
 
 	<main>
+    <div class="blood"></div>
 		<!-- Black hole for other content -->
 		<slot />
 	</main>

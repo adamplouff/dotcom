@@ -9,44 +9,10 @@
 	<title>{config.title}</title>
 </svelte:head>
 
-<!-- Posts -->
-<section>
-	<ul class="posts">
-		{#each data.posts as post}
-			<li class="post">
-				<a href={post.slug} class="title">{post.title}</a>
-				<p class="date">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
-			</li>
-		{/each}
-	</ul>
-</section>
+<h1>{config.title}</h1>
+<p>Archmage of simplicity</p>
+<p>Ruler of the kingdom of <a href="http://battleaxe.co" target="_blank" rel="noopener noreferrer">Battleaxia</a></p>
 
 <style>
-	.posts {
-		display: grid;
-		gap: 2rem;
-	}
 
-	.post {
-		max-inline-size: var(--size-content-3);
-	}
-
-	.post:not(:last-child) {
-		border-bottom: 1px solid var(--border);
-		padding-bottom: var(--size-7);
-	}
-
-	.title {
-		font-size: var(--font-size-fluid-3);
-		text-transform: capitalize;
-	}
-
-	.date {
-		color: var(--text-2);
-	}
-
-	.description {
-		margin-top: var(--size-3);
-	}
 </style>
