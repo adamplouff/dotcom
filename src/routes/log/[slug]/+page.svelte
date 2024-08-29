@@ -41,9 +41,9 @@
   </div>
 
   <!-- Post -->
-	<div class="prose">
+	<content class="prose">
 		<svelte:component this={data.content} />
-	</div>
+	</content>
 </article>
 
 <style>

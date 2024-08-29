@@ -1,35 +1,55 @@
 import * as config from '$lib/config'
-import type { Post } from '$lib/types'
+import { Feed } from "feed";
+import { getArticles } from '$lib/getArticles';
 
-export async function GET({ fetch }) {
-	const response = await fetch('api/posts')
-	const posts: Post[] = await response.json()
+// export const prerender = true
 
-	const headers = { 'Content-Type': 'application/xml' }
+export async function GET() {
+  const feed = new Feed({
+    title: config.title,
+    description: config.description,
+    id: config.url,
+    link: config.url,
+    language: "en", // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+    favicon: `${config.url}favicon.ico`,
+    copyright: `Copyright ${new Date().getFullYear().toString()}, Adam Plouff`,
+    generator: "🍉", // optional, default = 'Feed for Node.js'
+    feedLinks: {
+      rss: `${config.url}rss.xml`,
+    },
+    author: {
+      name: "Adam Plouff",
+      email: "adamplouff@gmail.com",
+      link: `${config.url}whoami`,
+    },
+    ttl: 60,
+  });
 
-	const xml = `
-		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-			<channel>
-				<title>${config.title}</title>
-				<description>${config.description}</description>
-				<link>${config.url}</link>
-				<atom:link href="${config.url}/rss.xml" rel="self" type="application/rss+xml"/>
-				${posts
-					.map(
-						(post) => `
-						<item>
-							<title>${post.title}</title>
-							<description>${post.description}</description>
-							<link>${config.url}/${post.slug}</link>
-							<guid isPermaLink="true">${config.url}/${post.slug}</guid>
-							<pubDate>${new Date(post.date).toUTCString()}</pubDate>
-						</item>
-					`
-					)
-					.join('')}
-			</channel>
-		</rss>
-	`.trim()
+  const articles = await getArticles();
 
-	return new Response(xml, { headers })
+  for (const article of articles) {
+    feed.addItem({
+      title: article.title,
+      id: `${config.url}/${article.slug}`,
+      link: `${config.url}/${article.slug}`,
+      description: article.description,
+      content: article.content,
+      author: [
+        {
+          name: "Adam Plouff",
+          email: "",
+          link: `${config.url}whoami`,
+        },
+      ],
+      date: new Date(article.date),
+    });
+  }
+
+
+
+  return new Response(feed.rss2(), {
+    headers: {
+      "Content-Type": "application/xml; charset=utf-8",
+    },
+  });
 }

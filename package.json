@@ -28,6 +28,7 @@
   "type": "module",
   "dependencies": {
     "fdir": "^6.2.0",
+    "feed": "^4.2.2",
     "lucide-svelte": "^0.429.0",
     "open-props": "^1.7.5",
     "shiki": "^1.14.1",
