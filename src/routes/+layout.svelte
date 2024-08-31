@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Footer from './footer.svelte'
 	import Header from './header.svelte'
+  import Player from './player.svelte'
 
 	import 'open-props/style'
 	import 'open-props/normalize'
@@ -21,6 +22,8 @@
 
   <!-- Footer -->
 	<Footer />
+
+  <Player/>
 </div>
 
 <style>

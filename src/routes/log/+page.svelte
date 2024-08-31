@@ -3,7 +3,28 @@
 	import * as config from '$lib/config'
 
 	export let data
-  console.log(`%cdata`,`color: white; background: #d97706; padding: 2px 4px; border-radius: 4px;`, data)
+
+  import { audioStore } from '$lib/stores/audioStore';
+
+  let playingData = {
+    title: '',
+    file: '',
+    playing: false
+  }
+
+  function playAudio(data) {
+    playingData = {
+      title: data.title,
+      file: data.file,
+      playing: true
+    }
+    audioStore.set(playingData);
+  }
+
+  function stopAudio() {
+    playingData.playing = false
+    audioStore.set(playingData);
+  }
 </script>
 
 <svelte:head>
@@ -20,10 +41,7 @@
 				<!-- <p class="description">{post.description}</p> -->
         <!-- if the categories contains listen, show a music player for file -->
         {#if post.categories.includes('listen')}
-          <audio controls>
-            <source src={post.file} type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
+          <button on:click={() => playAudio(post)}>▶</button>
         {:else}
           <img src={post.image} alt="">
           <p class="description">{post.description}</p>
@@ -55,9 +73,5 @@
 
   .description {
     margin-top: 1rem;
-  }
-
-  audio {
-    width: 100%;
   }
 </style>
