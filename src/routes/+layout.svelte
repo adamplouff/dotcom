@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Footer from './footer.svelte'
 	import Header from './header.svelte'
-  import Player from './player.svelte'
+  // import Player from './player.svelte'
 
 	import 'open-props/style'
-	import 'open-props/normalize'
+	// import 'open-props/normalize'
 	import 'open-props/buttons'
 
 	import '../app.css'
@@ -23,21 +23,18 @@
   <!-- Footer -->
 	<Footer />
 
-  <Player/>
+  <!-- <Player/> -->
 </div>
 
 <style>
 	.layout {
 		height: 100%;
-		max-inline-size: 1440px;
-		display: grid;
-		grid-template-rows: auto 1fr auto;
-		margin-inline: auto;
-		padding-inline: var(--size-7);
-	}
-
-	main {
-		padding-block: var(--size-9);
+		/* display: grid;
+		grid-template-rows: auto 1fr auto; */
+    display: flex;
+    flex-direction: column;
+		margin: var(--size-7);
+    padding-top: var(--size-8);
 	}
 
 	@media (min-width: 1440px) {
@@ -45,4 +42,11 @@
 			padding-inline: 0;
 		}
 	}
+  /* mobile */
+  @media (max-width: 600px) {
+    .layout {
+      margin: 8px;
+      /* padding-top: var(--size-7); */
+    }
+  }
 </style>

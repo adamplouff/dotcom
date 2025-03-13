@@ -5,12 +5,17 @@
 
 <nav>
   <!-- Title -->
-	<a href="/" class="title">
-		<b>{config.title}</b>
-	</a>
+  <p>
+
+    <a href="/" class="title">
+      <span>{config.title}</span>
+    </a>
+    ::
+    <a href="/about">about</a>
+  </p>
 
   <!-- Navigation -->
-	<ul class="links">
+	<!-- <ul class="links">
     <li>
       <a href="/log">Log</a>
     </li>
@@ -20,7 +25,7 @@
 		<li>
 			<a href="/rss.xml" target="_blank">RSS</a>
 		</li>
-	</ul>
+	</ul> -->
 
   <!-- Theme -->
   <Toggle />
@@ -28,11 +33,22 @@
 
 <style>
 	nav {
-		padding-block: var(--size-7);
+    width: -webkit-fill-available;
+    position: fixed;
+    top: 0;
+    left: 0;
+		/* padding-block: var(--size-7); */
+    display: flex;
+    justify-content: space-between;
+    mix-blend-mode: difference;
+    padding: var(--size-3) var(--size-7);
+    /* padding: 8px; */
 	}
 
 	.links {
-		margin-block: var(--size-7);
+    display: flex;
+    gap: var(--size-3);
+		/* margin-block: var(--size-7); */
 	}
 
 	a {
@@ -40,16 +56,10 @@
 		text-decoration: none;
 	}
 
-	@media (min-width: 768px) {
-		nav {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.links {
-			display: flex;
-			gap: var(--size-7);
-			margin-block: 0;
-		}
-	}
+	/* mobile */
+  @media (max-width: 600px) {
+    nav {
+      padding: 8px;
+    }
+  }
 </style>

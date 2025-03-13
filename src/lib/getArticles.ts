@@ -9,7 +9,7 @@ export async function getArticles() {
 
   for (const article of articles) {
     const slug = article.slug;
-    const postUrl = `https://adamplouff.com/log/${slug}`;
+    const postUrl = `https://adamplouff.com/${slug}`;
     const postResponse = await fetch(postUrl);
     const postContent = await postResponse.text();
     const contentMatch = postContent.match(/<content[^>]*>([\s\S]*?)<\/content>/);

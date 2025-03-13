@@ -22,7 +22,7 @@
 	button {
 		padding: 0;
 		font-weight: inherit;
-		background: none;
+		/* background: none; */
 		border: none;
 		box-shadow: none;
 		overflow: hidden;
