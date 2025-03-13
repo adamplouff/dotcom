@@ -25,6 +25,11 @@
 </svelte:head>
 <!-- Posts -->
 <!-- {#if !isPage} -->
+
+
+{#if data.posts.length > 0}
+<PostList posts={data.posts} />
+{:else}
 <div class="post">
   {#if data.page}
   <div class="content">
@@ -47,9 +52,6 @@
   {/if}
 
 </div>
-
-{#if data.posts.length > 0}
-<PostList posts={data.posts} />
 {/if}
 <!-- {:else}
 <section>
