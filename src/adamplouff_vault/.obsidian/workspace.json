@@ -11,28 +11,17 @@
             "id": "d9001bf83b2e00ca",
             "type": "leaf",
             "state": {
-              "type": "audio",
+              "type": "markdown",
               "state": {
-                "file": "_assets/Brutalism.mp3"
+                "file": "notes/about.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-audio",
-              "title": "Brutalism"
-            }
-          },
-          {
-            "id": "728f4e4fa6e1f888",
-            "type": "leaf",
-            "state": {
-              "type": "audio",
-              "state": {
-                "file": "_assets/Runecaster - Architects of Destiny.mp3"
-              },
-              "icon": "lucide-file-audio",
-              "title": "Runecaster - Architects of Destiny"
+              "icon": "lucide-file",
+              "title": "about"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -175,19 +164,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "728f4e4fa6e1f888",
+  "active": "d9001bf83b2e00ca",
   "lastOpenFiles": [
+    "Home.md",
+    "notes/about.md",
+    "_assets/Runecaster - Architects of Destiny.mp3",
+    "notes/meta.md",
     "_assets/Brutalism.mp3",
     "notes/everything-is-awesome-until-it-isnt.md",
     "notes/forty.md",
-    "notes/about.md",
     "notes/architects-of-destiny.md",
     "notes/brutalism.md",
     "notes/skeeball.md",
     "notes/new-blog.md",
     "notes/bloodsport-01.md",
     "notes/2018-tried-to-destroy-me.md",
-    "Home.md",
     "notes/gear.md",
     "notes/lonely-plugins-sphere.md",
     "_assets/forty.jpg",
@@ -204,7 +195,6 @@
     "notes/launch-overlord-2.md",
     "notes/lua-colon.md",
     "_assets/motion-hatch-thumb.jpg",
-    "notes/rh2-rubberpin-setup.md",
     "_assets/som-thumb.webp",
     "_assets/rh2-rubberpin-setup.gif",
     "_assets/rh2-rubberrig-setup.gif",
@@ -218,7 +208,6 @@
     "_assets/2019.12.29 - Skeeball.mp3",
     "_assets/2020.01.14 - Brutalism.mp3",
     "templates",
-    "_assets/Runecaster - Architects of Destiny.mp3",
     "notes",
     "notes",
     "_assets"

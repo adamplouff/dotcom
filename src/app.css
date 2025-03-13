@@ -150,6 +150,7 @@ section {
 }
 img {
 	border-radius: var(--radius-1);
+  width: 100%;
   /* max-width: 800px; */
 }
 strong {
