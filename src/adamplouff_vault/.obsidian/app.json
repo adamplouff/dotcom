@@ -3,5 +3,6 @@
   "newFileFolderPath": "notes",
   "attachmentFolderPath": "_assets",
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": false,
+  "promptDelete": false
 }

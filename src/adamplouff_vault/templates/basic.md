@@ -1,13 +1,10 @@
 ---
-title: Second page
-description: second post.
-date: 2023-4-15
-categories:
-  - til
-published: true
+title: 
+description: 
+date: <% tp.date.now() %>
+tags: 
+published: false
+image: 
+file:
 ---
-# Linking
 
-[[meta]]
-
-![Import Ai files](../ImportAifile.jpg)

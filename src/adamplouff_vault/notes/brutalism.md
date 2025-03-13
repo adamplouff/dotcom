@@ -1,9 +1,9 @@
 ---
 title: Brutalism
 description: 
-date: 2020-1-14
-categories:
+date: 2020-01-14
+tags:
   - listen
-published: true
+published: false
 file: Brutalism.mp3
 ---

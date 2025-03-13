@@ -1,10 +1,10 @@
 ---
 title: Nice blog grandpa
 description: "In the modern age, we own so little. We rent media and invest our creativity into ephemeral platforms. This is not a rant against social media or the enshitification of subscription culture, but rather my attempt at preserving a small piece of the internet with a few clear stipulations:"
-date: 2024-8-27
-categories:
+date: 2024-08-27
+tags:
   - meta
-published: true
+published: false
 ---
 
 ## Why
@@ -29,16 +29,15 @@ I don't want my work to disappear because of decisions in a boardroom. I don't w
 
 ## Slash pages
 
-- listen
-- gear
+- [listen](../listen)
+- [gear](gear.md)
 - friends
-- log or blog
-- music
+- [log](../log)
 - now
 - next
 - colophon
 - about
 - slashes
-- til
+- [til](til.md)
 - uses
 - why
