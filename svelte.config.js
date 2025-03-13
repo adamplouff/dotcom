@@ -4,7 +4,20 @@ import { defineConfig } from 'vite';
 import { fdir } from 'fdir';
 
 import { mdsvex, escapeSvelte } from 'mdsvex'
-import { getHighlighter } from 'shiki'
+import { createHighlighter } from 'shiki';
+const theme = 'catppuccin-mocha';
+const highlighter = await createHighlighter({
+	themes: [theme],
+	langs: ['javascript', 'typescript', 'lua']
+});
+
+import remarkUnwrapImages from 'remark-unwrap-images'
+import rehypeSlug from 'rehype-slug'
+import rehypeCallouts from 'rehype-callouts'
+// import toc from '@jsdevtools/rehype-toc'
+import rehypeExternalLinks from 'rehype-external-links'
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+// import remarkOEmbed from "remark-oembed";
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
@@ -12,15 +25,12 @@ const mdsvexOptions = {
   layout: {
 		_: './src/mdsvex.svelte'
 	},
+  remarkPlugins: [remarkUnwrapImages],
+  rehypePlugins: [rehypeSlug, [rehypeExternalLinks, {target: '_blank'}], [rehypeAutolinkHeadings, { behavior: 'prepend', }], [rehypeCallouts, {  }]],
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
-			const highlighter = await getHighlighter({
-				themes: ['catppuccin-mocha'],
-				langs: ['javascript', 'typescript', 'lua']
-			})
-			await highlighter.loadLanguage('javascript', 'typescript')
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'catppuccin-mocha' }))
-			return `{@html \`${html}\` }`
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme }));
+			return `{@html \`${html}\` }`;
 		}
 	},
 }
@@ -30,6 +40,9 @@ const config = {
   extensions: ['.svelte', '.md'],
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
+  layout: {
+		_: './src/mdsvex.svelte'
+	},
 	preprocess: [
     vitePreprocess(),
     mdsvex(mdsvexOptions),
