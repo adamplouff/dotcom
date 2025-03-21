@@ -14,7 +14,7 @@ export async function load({ fetch, params }) {
         meta: pageData.metadata,
         slug: params.slug
       } : undefined
-    } catch (e) { console.log(e); }
+    } catch (e) { console.log(404, `Could not the file ${slug}. Loading the tag page instead.`) }
 
 
     const response = await fetch('api/posts')
@@ -31,6 +31,6 @@ export async function load({ fetch, params }) {
       slug
     }
   } catch (e) {
-    error(404, `Could not find ${slug}`)
+    console.log(404, `Could not the file ${slug}. Loading the tag page instead.`)
   }
 }

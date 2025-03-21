@@ -8,14 +8,10 @@ image:
 file:
 ---
 
-```dataview
-LIST
-FROM #motion
-```
 
 ## Unpublished
 ```dataview
-table title as "Title", dateformat(file.ctime,"yyyy-MM-dd") as "Date", tags
+table title as "Title", dateformat(date,"yyyy-MM-dd") as "Date", tags
 from "notes"
 sort date desc
 where !published
@@ -24,8 +20,14 @@ where !published
 ## Published
 
 ```dataview
-table title as "Title", dateformat(file.ctime,"yyyy-MM-dd") as "Date", tags
+table title as "Title", dateformat(date,"yyyy-MM-dd") as "Date", tags
 from "notes"
 sort date desc
 where published
+```
+## Motion
+
+```dataview
+LIST
+FROM #motion
 ```

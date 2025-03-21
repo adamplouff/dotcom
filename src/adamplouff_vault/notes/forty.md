@@ -51,3 +51,11 @@ My 30s were spent getting down to business.
 	- Released [Overlord 2](https://lore.battleaxe.co/overlord-2-sneak-peek/)
 
 ## Into the future
+
+I'm not totally sure what the next decade will look like, and I've learned that when I plan too hard, it's easy to be disappointed. My main focus right now is Overlord 2 and expanding it into more host apps. I'm really fascinated by connecting as many platforms as possible to help designers do their best work.
+
+I'm really interested in exploring the humanity of this work. It's 2024 and the state of LLMs is really wild. I can't take too strong of a stance on it right now, but I am currently not that interested in exploring it. Most of the work that comes from these tools ranges from requiring a lot of hand-holding to being total slop. 
+
+I don't enjoy slop, and I would rather invest time into developing skills to create what I imagine rather than outsourcing creativity to a reproduction machine so I can be in charge of fixing it. 
+
+My intention in this new decade is to pursue craft and expression and to learn more about myself and the people I care for.

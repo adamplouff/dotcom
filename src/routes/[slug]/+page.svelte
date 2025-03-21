@@ -10,18 +10,18 @@
 
 <!-- SEO -->
 <svelte:head>
-	<title>{`${config.title}: ${data.slug}`}</title>
-  <meta property="og:site_name" content={`${config.title}: ${data.slug}`} />
+	<title>{`${config.title} : ${data.page?.meta.title || data.slug}`}</title>
+  <meta property="og:site_name" content={`${config.title} : ${data.page?.meta.title || data.slug}`} />
   <meta property="og:locale" content="en" />
   <meta property="og:url" content={config.url} />
   <meta property="og:type" content="article" />
   <meta property="og:title" content={`${config.title}: ${data.slug}`} />
-  <meta property="og:description" content={data?.meta?.description ? data.meta.description : config.description} />
-  <meta property="og:image" content={data?.meta?.image ? `./${data.meta.image}` : `./social.jpg`} />
+  <meta property="og:description" content={data?.page?.meta?.description ? data.page.meta.description : config.description} />
+  <meta property="og:image" content={data?.page?.meta?.image ? `https://adamplouff.com/${data.page.meta.image}` : `https://adamplouff.com/social.png`} />
   <meta property="og:image:alt" content="social img" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="627" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content={data?.page?.meta?.image ? `https://adamplouff.com/${data.page.meta.image}` : `https://adamplouff.com/social.png`} />
 </svelte:head>
 <!-- Posts -->
 <!-- {#if !isPage} -->

@@ -1,6 +1,6 @@
 ---
-title: The Overlord of After Effects Tools
-description: A chat with Adam Plouff
+title: Motion hatch podcast
+description: Making money in mograph
 date: 2019-01-15
 tags:
   - podcast

@@ -1,6 +1,6 @@
 ---
-title: The Overlord of After Effects Tools
-description: A chat with Adam Plouff
+title: School of Motion podcast
+description: Sharpening The Battle Axe w/Adam Plouff
 date: 2020-02-26
 tags:
   - podcast
