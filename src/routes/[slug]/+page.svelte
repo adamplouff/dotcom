@@ -21,7 +21,7 @@
   <meta property="og:image:alt" content="social img" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content={data?.page?.meta?.image ? `https://adamplouff.com/${data.page.meta.image}` : `https://adamplouff.com/social.png`} />
+  <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 <!-- Posts -->
 <!-- {#if !isPage} -->
