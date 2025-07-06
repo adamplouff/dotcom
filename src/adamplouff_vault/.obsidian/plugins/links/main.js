@@ -2957,24 +2957,27 @@ var ObsidianLinksSettingTab = class extends import_obsidian6.PluginSettingTab {
       }
     };
     toggleSetLinkDestinationFromClipboardContextMenuSetting(this.plugin.settings.ffSetLinkDestinationFromClipbard);
-    new import_obsidian6.Setting(containerEl).setName("Copy link").setDesc("").addToggle((toggle) => {
+    const settingCopyLinkToClipboard = new import_obsidian6.Setting(containerEl).setName("Copy link").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.copyLinkToClipboard).onChange(async (value) => {
         this.plugin.settings.contexMenu.copyLinkToClipboard = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian6.Setting(containerEl).setName("Cut link").setDesc("").addToggle((toggle) => {
+    this.setSettingHelpLink(settingCopyLinkToClipboard, this.getFullDocUrl("copy"));
+    const settingCutLinkToClipboard = new import_obsidian6.Setting(containerEl).setName("Cut link").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.cutLinkToClipboard).onChange(async (value) => {
         this.plugin.settings.contexMenu.cutLinkToClipboard = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian6.Setting(containerEl).setName("Copy link destination").setDesc("").addToggle((toggle) => {
+    this.setSettingHelpLink(settingCutLinkToClipboard, this.getFullDocUrl("cut"));
+    const settingCopyLinkDestination = new import_obsidian6.Setting(containerEl).setName("Copy link destination").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.copyLinkDestination).onChange(async (value) => {
         this.plugin.settings.contexMenu.copyLinkDestination = value;
         await this.plugin.saveSettings();
       });
     });
+    this.setSettingHelpLink(settingCopyLinkDestination, this.getFullDocUrl("copy-link-destination-to-clipboard"));
     const settingCopyLinkToObjectContextMenu = new import_obsidian6.Setting(containerEl).setName("Copy link to element").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.copyLinkToHeadingToClipboard).onChange(async (value) => {
         this.plugin.settings.contexMenu.copyLinkToHeadingToClipboard = value;
@@ -2989,36 +2992,41 @@ var ObsidianLinksSettingTab = class extends import_obsidian6.PluginSettingTab {
       }
     };
     toggleCopyLinkToObjectContextMenuSetting(this.plugin.settings.ffCopyLinkToObject);
-    new import_obsidian6.Setting(containerEl).setName("Unlink").setDesc("").addToggle((toggle) => {
+    const settingUnlink = new import_obsidian6.Setting(containerEl).setName("Unlink").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.unlink).onChange(async (value) => {
         this.plugin.settings.contexMenu.unlink = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian6.Setting(containerEl).setName("Convert to wikilink").setDesc("").addToggle((toggle) => {
+    this.setSettingHelpLink(settingUnlink, this.getFullDocUrl("unlink"));
+    const settingConvertToWikilink = new import_obsidian6.Setting(containerEl).setName("Convert to wikilink").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.convertToWikilink).onChange(async (value) => {
         this.plugin.settings.contexMenu.convertToWikilink = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian6.Setting(containerEl).setName("Convert to autolink").setDesc("").addToggle((toggle) => {
+    this.setSettingHelpLink(settingConvertToWikilink, this.getFullDocUrl("convert-to-wiki-link"));
+    const settingConvertToAutolink = new import_obsidian6.Setting(containerEl).setName("Convert to autolink").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.convertToAutolink).onChange(async (value) => {
         this.plugin.settings.contexMenu.convertToAutolink = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian6.Setting(containerEl).setName("Convert to markdown link").setDesc("").addToggle((toggle) => {
+    this.setSettingHelpLink(settingConvertToAutolink, this.getFullDocUrl("convert-to-autolink"));
+    const settingConvertToMarkdownlink = new import_obsidian6.Setting(containerEl).setName("Convert to markdown link").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.convertToMakrdownLink).onChange(async (value) => {
         this.plugin.settings.contexMenu.convertToMakrdownLink = value;
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian6.Setting(containerEl).setName("Convert to HTML link").setDesc("").addToggle((toggle) => {
+    this.setSettingHelpLink(settingConvertToMarkdownlink, this.getFullDocUrl("convert-to-markdown-link"));
+    const settingConvertToHtmlLink = new import_obsidian6.Setting(containerEl).setName("Convert to HTML link").setDesc("").addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.contexMenu.convertToHtmlLink).onChange(async (value) => {
         this.plugin.settings.contexMenu.convertToHtmlLink = value;
         await this.plugin.saveSettings();
       });
     });
+    this.setSettingHelpLink(settingConvertToHtmlLink, this.getFullDocUrl("convert-to-html-link"));
     if (this.plugin.settings.ffReplaceLink) {
       new import_obsidian6.Setting(containerEl).setName("Replace link").setDesc("").addToggle((toggle) => {
         toggle.setValue(this.plugin.settings.contexMenu.replaceLink).onChange(async (value) => {
@@ -4258,7 +4266,6 @@ var ExtractSectionCommand = class extends CommandBase {
     let blockStart;
     let blockEnd;
     const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    let found = false;
     blockStart = blockEnd = cursorOffset;
     let headerLevel = 1;
     while (true) {
@@ -4281,24 +4288,8 @@ var ExtractSectionCommand = class extends CommandBase {
     if (blockStart < 0) {
       blockStart = 0;
     }
-    found = false;
-    let idx = blockEnd;
-    while (true) {
-      blockEnd = text.indexOf("\n" + "#".repeat(headerLevel) + " ", blockEnd);
-      if (blockEnd < 0) {
-        blockEnd = text.length;
-        break;
-      } else {
-        idx = blockEnd + 1;
-        while (idx < text.length && text[idx] == "#") {
-          idx++;
-        }
-        if (idx >= text.length || text[idx] == " ") {
-          break;
-        }
-      }
-    }
-    if (blockEnd >= text.length) {
+    blockEnd = this.getSectionEnd(text, blockEnd, headerLevel);
+    if (blockEnd === void 0) {
       blockEnd = text.length;
     }
     const section = editor.getRange(editor.offsetToPos(blockStart), editor.offsetToPos(blockEnd));
@@ -4315,10 +4306,28 @@ var ExtractSectionCommand = class extends CommandBase {
       (async () => {
         const noteFile = await this.obsidianProxy.Vault.createNote(noteFullPath, noteContent);
         const rawWikilink = `[[${noteFullPath}|${safeFilename}]]`;
-        editor.replaceRange(rawWikilink, editor.offsetToPos(blockStart), editor.offsetToPos(blockEnd));
+        editor.replaceRange(rawWikilink + "\n", editor.offsetToPos(blockStart), editor.offsetToPos(blockEnd));
         editor.setCursor(editor.offsetToPos(blockStart + rawWikilink.length));
       })();
     }
+  }
+  getSectionEnd(text, start2, headerLevel) {
+    const headerRegex = /^(#+)\s/;
+    let position = start2;
+    while (position < text.length) {
+      const nextLineBreak = text.indexOf("\n", position);
+      const lineEnd = nextLineBreak === -1 ? text.length : nextLineBreak;
+      const line = text.slice(position, lineEnd);
+      const match = line.match(headerRegex);
+      if (match) {
+        const currentHeaderLevel = match[1].length;
+        if (currentHeaderLevel <= headerLevel) {
+          return position > 1 && text[position - 1] === "\r" ? position - 1 : position;
+        }
+      }
+      position = lineEnd + 1;
+    }
+    return void 0;
   }
 };
 

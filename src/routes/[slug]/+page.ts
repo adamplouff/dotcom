@@ -12,7 +12,8 @@ export async function load({ fetch, params }) {
       page = (pageData) ? {
         content: pageData.default,
         meta: pageData.metadata,
-        slug: params.slug
+        slug: params.slug,
+        tags: pageData.metadata.tags || []
       } : undefined
     } catch (e) { console.log(404, `Could not the file ${slug}. Loading the tag page instead.`) }
 

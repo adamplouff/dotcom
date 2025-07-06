@@ -35,12 +35,22 @@
   <div class="content">
 
     <h2>{data.page.meta.title}</h2>
+    <div class="tags">
+      {#each data.page.tags as tag}
+      <a href={`/${tag}`}>
+        <span>
+          &num;{tag}
+        </span>
+      </a>
+      {/each}
+    </div>
+
     <!-- <hgroup>
     </hgroup> -->
     <content class="prose">
       <svelte:component this={data.page.content} />
     </content>
-    <p>Last edited: {formatDate(data.page.meta.date)}</p>
+    <p>posted: {formatDate(data.page.meta.date)}</p>
   </div>
 
     {#if data.posts.length > 0}
