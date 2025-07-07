@@ -1,6 +1,6 @@
 ---
 title: Rubberhose 3 promo
-Description: Third time's the charm
+description: Third time's the charm
 date: 2023-05-22
 tags:
   - motion

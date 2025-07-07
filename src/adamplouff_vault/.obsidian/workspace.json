@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/overlord-promo.md",
+                "file": "notes/reel-2008.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "overlord-promo"
+              "title": "reel-2008"
+            }
+          },
+          {
+            "id": "25e9c678222f4789",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.4"
             }
           },
           {
@@ -63,7 +75,8 @@
               "title": "motion-hatch-podcast"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -206,17 +219,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d9001bf83b2e00ca",
+  "active": "25e9c678222f4789",
   "lastOpenFiles": [
+    "notes/reel-2011.md",
+    "notes/reel-2008.md",
+    "_assets/reel-2008.jpg",
+    "notes/rubberhose-v2-promo.md",
+    "_assets/reel-2011.png",
+    "notes/rubberhose-v3-promo.md",
+    "notes/overlord-promo.md",
     "_assets/overlord-promo.jpg",
     "_assets/thumb.jpg",
     "notes/rubberhose-v1-promo.md",
-    "notes/overlord-promo.md",
     "notes/anubis-promo.md",
     "notes/timelord-promo.md",
-    "notes/rubberhose-v3-promo.md",
     "notes/skeeball.md",
-    "notes/rubberhose-v2-promo.md",
     "Home.md",
     "notes/sloth-animalators.md",
     "notes/som-podcast.md",
@@ -232,9 +249,6 @@
     "notes/tin-can-001.md",
     "_assets/anubis-promo.jpg",
     "_assets/timelord-promo.gif",
-    "_assets/Reese-timelord-emai.jpg",
-    "_assets/timelord-promo.jpg",
-    "_assets/reeceEmail.jpg",
     "notes/buttcapper-promo.md",
     "vimeo.com/144870035.md",
     "vimeo.com/slantedstudios.md",
@@ -243,8 +257,6 @@
     "notes/jack-vaughan-01.md",
     "notes/new-blog.md",
     "notes/2018-tried-to-destroy-me.md",
-    "notes/forty.md",
-    "notes/motion-hatch-podcast.md",
     "_assets/Runecaster - Architects of Destiny.mp3",
     "_assets/Brutalism.mp3",
     "routes",

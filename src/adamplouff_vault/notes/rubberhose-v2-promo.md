@@ -21,16 +21,16 @@ During development, I began to enjoy creating music again after selling all my g
 
 ### Credits
 
-00:03 - [Emanuele Colombo](http://vimeo.com/143749617)
-00:04 - [Cub Studio](http://vimeo.com/144870035)
-00:06 - [Andrew Embury](http://vimeo.com/188089136)
-00:08 - [The Furrow](http://vimeo.com/169871559)
-00:10 - [Tony Babel](http://https://dribbble.com/tonybabel)
-00:11 - [Buck](http://vimeo.com/189245939)
-00:12 - [Think Mojo](http://vimeo.com/181049571) + [Tony Silva](http://vimeo.com/tonysilva) / Andrew Embury
-00:13 - [Pep Rally](http://vimeo.com/171939446) + [Slanted Studio](http://vimeo.com/slantedstudios)
-00:14 - [Jo Le Huquet](http://vimeo.com/joelehuquet)
-00:15 - [James Curran](http://vimeo.com/184516208) + [Ross Plaskow](http://www.rossplaskow.com) + [Bee Grandinetti](http://vimeo.com/grandinetti)
-00:16 - [James Boorman](http://vimeo.com/182803251)
-00:17 - [Demo Duck](http://vimeo.com/174251571) + [Rocketpanda](http://vimeo.com/therocketpanda)
-00:34 - [Seth Eckert](http://dribbble.com/shots/2450068-Elf-Moves)
+- 00:03 - [Emanuele Colombo](http://vimeo.com/143749617)
+- 00:04 - [Cub Studio](http://vimeo.com/144870035)
+- 00:06 - [Andrew Embury](http://vimeo.com/188089136)
+- 00:08 - [The Furrow](http://vimeo.com/169871559)
+- 00:10 - [Tony Babel](http://https://dribbble.com/tonybabel)
+- 00:11 - [Buck](http://vimeo.com/189245939)
+- 00:12 - [Think Mojo](http://vimeo.com/181049571) + [Tony Silva](http://vimeo.com/tonysilva) / Andrew Embury
+- 00:13 - [Pep Rally](http://vimeo.com/171939446) + [Slanted Studio](http://vimeo.com/slantedstudios)
+- 00:14 - [Jo Le Huquet](http://vimeo.com/joelehuquet)
+- 00:15 - [James Curran](http://vimeo.com/184516208) + [Ross Plaskow](http://www.rossplaskow.com) + [Bee Grandinetti](http://vimeo.com/grandinetti)
+- 00:16 - [James Boorman](http://vimeo.com/182803251)
+- 00:17 - [Demo Duck](http://vimeo.com/174251571) + [Rocketpanda](http://vimeo.com/therocketpanda)
+- 00:34 - [Seth Eckert](http://dribbble.com/shots/2450068-Elf-Moves)
