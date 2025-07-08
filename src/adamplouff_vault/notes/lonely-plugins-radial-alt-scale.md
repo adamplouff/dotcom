@@ -1,6 +1,6 @@
 ---
 title: Lonely Plugins - Alternate scaling
-description: Productivity apps come and go, but paper is forever
+description: Scaling without resizing
 date: 2012-08-30
 tags:
   - motion

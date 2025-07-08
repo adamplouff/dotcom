@@ -1,6 +1,6 @@
 ---
 title: Food Rules
-description: Productivity apps come and go, but paper is forever
+description: Colab for a chicken restaurant
 date: 2013-11-25
 tags:
   - motion

@@ -13,24 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/reel-2008.md",
+                "file": "notes/why-pay.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "reel-2008"
-            }
-          },
-          {
-            "id": "25e9c678222f4789",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.4"
+              "title": "why-pay"
             }
           },
           {
@@ -75,8 +63,7 @@
               "title": "motion-hatch-podcast"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -219,10 +206,29 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "25e9c678222f4789",
+  "active": "d9001bf83b2e00ca",
   "lastOpenFiles": [
-    "notes/reel-2011.md",
+    "notes/nine-square-dotdotdot.md",
+    "notes/chemtrails-beta.md",
+    "notes/geo-construction-septagon.md",
+    "notes/geo-construction-pentagon.md",
+    "notes/geo-construction-triangle.md",
+    "notes/flattended-icoshedron.md",
+    "notes/stroke-rendered-platonic.md",
     "notes/reel-2008.md",
+    "_assets/stroked-platonic.gif",
+    "notes/geo-construction-square.md",
+    "notes/xamarin-test-cloud.md",
+    "notes/nine-squares-01.md",
+    "notes/nine-squares-18.md",
+    "notes/xamarin-evolve.md",
+    "notes/food-rules.md",
+    "notes/circle-square.md",
+    "notes/lonely-plugins-radial-alt-scale.md",
+    "notes/walk-cycle-2012.md",
+    "notes/lonely-plugins-radial-shadow.md",
+    "notes/timelord-promo.md",
+    "notes/reel-2011.md",
     "_assets/reel-2008.jpg",
     "notes/rubberhose-v2-promo.md",
     "_assets/reel-2011.png",
@@ -232,31 +238,13 @@
     "_assets/thumb.jpg",
     "notes/rubberhose-v1-promo.md",
     "notes/anubis-promo.md",
-    "notes/timelord-promo.md",
     "notes/skeeball.md",
-    "Home.md",
-    "notes/sloth-animalators.md",
-    "notes/som-podcast.md",
-    "notes/stroke-rendered-platonic.md",
-    "rubberhose-v3-promo.md",
-    "notes/rh2-rubberpin.md",
-    "notes/rogan.md",
-    "notes/rh-hose-connection.md",
     "_assets/rubberhose-v3-promo.jpg",
     "_assets/rubberhose-v3-procedural.gif",
     "_assets/rubberhose-v3-skeleton.gif",
     "_assets/rubberhose-v3-promo.png",
-    "notes/tin-can-001.md",
     "_assets/anubis-promo.jpg",
-    "_assets/timelord-promo.gif",
-    "notes/buttcapper-promo.md",
-    "vimeo.com/144870035.md",
-    "vimeo.com/slantedstudios.md",
     "vimeo.com",
-    "notes/ten-years.md",
-    "notes/jack-vaughan-01.md",
-    "notes/new-blog.md",
-    "notes/2018-tried-to-destroy-me.md",
     "_assets/Runecaster - Architects of Destiny.mp3",
     "_assets/Brutalism.mp3",
     "routes",

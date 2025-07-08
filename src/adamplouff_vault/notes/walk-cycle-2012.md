@@ -1,6 +1,6 @@
 ---
 title: Walk cycle 2012
-description: 
+description: Trying to draw people walking. Poorly.
 date: 2012-08-25
 tags:
   - motion

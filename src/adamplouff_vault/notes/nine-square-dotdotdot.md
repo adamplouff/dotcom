@@ -1,6 +1,6 @@
 ---
 title: 9 Squares + dotdotdot
-description: 
+description: "This special 9 Squares round was created as part of onedotzero’s event. For this round, each square was composed of a deconstructed version of the #dotdotdot branding: circles, dots, and lines in black and white."
 date: 2015-10-05
 tags:
   - motion

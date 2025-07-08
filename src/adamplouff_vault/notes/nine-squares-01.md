@@ -1,6 +1,6 @@
 ---
 title: 9 Squares
-description: 
+description: The first round of an outstanding motion industry collaborative project
 date: 2015-03-02
 tags:
   - motion

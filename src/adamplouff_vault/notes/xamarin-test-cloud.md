@@ -1,6 +1,6 @@
 ---
 title: Xamarin Text Cloud
-description: 
+description: A simple explainer that helped invent Rubberhose
 date: 2015-04-28
 tags:
   - motion

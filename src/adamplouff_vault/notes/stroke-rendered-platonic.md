@@ -1,6 +1,6 @@
 ---
 title: Stroked Rendered Platonic
-description: 
+description: "The isometric view in the previous file made it tough to see what what going on. As did the uniform styling of all the interior lines. The few merits of this technique are: interior lines, multiple styles on strokes and shapes at vertices."
 date: 2014-05-21
 tags:
   - motion

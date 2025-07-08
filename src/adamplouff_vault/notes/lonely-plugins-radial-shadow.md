@@ -1,6 +1,6 @@
 ---
 title: Lonely Plugins - Radial Shadow
-description: Productivity apps come and go, but paper is forever
+description: What if you clamped the vertical position of circles?
 date: 2012-08-11
 tags:
   - motion

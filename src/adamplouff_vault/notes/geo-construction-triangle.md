@@ -1,6 +1,6 @@
 ---
 title: Triangle construction
-description: 
+description: While exploring the geometric construction of an equilateral triangle I accidentally found the Deathly Hallows.
 date: 2014-06-04
 tags:
   - motion

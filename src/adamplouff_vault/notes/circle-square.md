@@ -1,6 +1,6 @@
 ---
 title: Circle to square
-description: 
+description: Trying to draw effects. Poorly.
 date: 2012-09-15
 tags:
   - motion

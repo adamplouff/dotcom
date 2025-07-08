@@ -1,6 +1,6 @@
 ---
 title: Flattened icosahedron
-description: 
+description: Exploring some of the possibilities of a flattened platonic solid and the sacred geo it produces. Vertex data generated in C4D sent to AE to drop in shape layer strokes.
 date: 2014-05-19
 tags:
   - motion

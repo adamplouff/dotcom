@@ -1,6 +1,6 @@
 ---
 title: Septagon construction
-description: 
+description: 7 is a pretty crazy number that appears to have a strong significance in most religions (as well as being the defining trait of the main religion in Westeros).
 date: 2014-06-30
 tags:
   - motion
